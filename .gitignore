@@ -1,0 +1,99 @@
+# GST RAG Project .gitignore
+
+# Vector Database & Data
+data/
+*.db
+*.sqlite3
+chroma_db/
+
+# PDF Documents
+*.pdf
+documents/
+pdfs/
+
+# Environment Variables
+.env
+.env.local
+.env.production
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/
+
+# AWS
+.aws/
+
+# Large files
+*.zip
+*.tar.gz
+*.rar
+
+# Model files (if you download any)
+*.bin
+*.safetensors
+models/
+
+# Backup files
+backup/
+*.bak
