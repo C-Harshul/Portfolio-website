@@ -7,157 +7,419 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="app-container">
-        <!-- Header -->
-        <header class="top-header">
-            <div class="header-left">
-                <h1 class="header-title">Harshul Chandrashekhar</h1>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="profile-image-container">
+                <img src="assets/IMG_8523.PNG" alt="Harshul Chandrashekhar" class="profile-image" />
             </div>
-            <div class="header-right">
-                <nav class="tab-navigation">
-                    <button class="tab-button" data-section="about-section">About</button>
-                    <button class="tab-button" data-section="work-section">Work</button>
-                    <button class="tab-button" data-section="projects-section">Projects</button>
-                </nav>
-                <a href="/chat.html" class="chat-button" target="_blank">Chat with Me</a>
+            <h1 class="hero-title">Harshul Chandrashekhar</h1>
+            <p class="hero-subtitle">Product Builder with strong cloud and AI-infrastructure background, focused on AI adoption and workflow automation</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/Harshul-Chandrasekhar" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                <a href="mailto:harshulc2001@gmail.com" class="social-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                </a>
+                <a href="/chat.html" target="_blank" class="chat-button-hero">Chat with Me</a>
             </div>
-        </header>
-
-        <!-- Main Content Area - Single Scrollable Page -->
-        <div class="main-content single-page" id="mainContent">
-            <!-- About Section -->
-            <section class="content-section" id="about-section">
-                <div class="content-wrapper">
-                    <div class="about-section">
-                        <div class="about-profile">
-                            <img src="assets/IMG_8523.PNG" alt="Harshul Chandrashekhar" class="about-profile-picture" />
-                        </div>
-                        <h2 class="greeting">Hey I'm Harshul</h2>
-                        <div class="about-text">
-                            <p class="intro-text">I am a software engineer turned Product Manager with the drive to bring change with technology</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Work Section -->
-            <section class="content-section" id="work-section">
-                <div class="content-wrapper">
-                    <h2 class="section-heading">Work & Experience</h2>
-                    <div class="work-list" id="workList">
-                        <div class="work-item">
-                            <div class="work-header">
-                                <h3 class="work-company">Oracle</h3>
-                                <span class="work-location">Bangalore, India</span>
-                            </div>
-                            <div class="work-title">Associate Software Developer</div>
-                            <div class="work-dates">Aug 2023 - Sep 2025</div>
-                            <ul class="work-description">
-                                <li>Spearheaded CI/CD pipeline design on Oracle Cloud Infrastructure (OCI), <strong>accelerating</strong> release cycles by <strong>3x</strong> and saving <strong>200+ engineering hours</strong></li>
-                                <li>Led cross-team effort to build <strong>third-party plugins</strong> from source on OCI, improving development efficiency while <strong>enforcing security</strong></li>
-                                <li>Drove cross-cloud containerization <strong>strategy</strong>, accelerating experimentation through early-stage <strong>PoC delivery</strong></li>
-                                <li>Reduced manual effort by <strong>77%</strong> by automating BlackDuck and Fortify security scans</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="work-item">
-                            <div class="work-header">
-                                <h3 class="work-company">Oracle</h3>
-                                <span class="work-location">Bangalore, India</span>
-                            </div>
-                            <div class="work-title">Software Development Intern</div>
-                            <div class="work-dates">Jan - Jul 2023</div>
-                            <ul class="work-description">
-                                <li>Reduced Fortify vulnerabilities by <strong>60%</strong> by implementing AES-256 encryption in runtime scripts</li>
-                                <li>Developed Diameter Security Application test suite to automate validation</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="work-item">
-                            <div class="work-header">
-                                <h3 class="work-company">Housy - Lank Hospitality Private Limited</h3>
-                                <span class="work-location">Pune, India</span>
-                            </div>
-                            <div class="work-title">Backend Development Intern</div>
-                            <div class="work-dates">July - Sep 2021</div>
-                            <ul class="work-description">
-                                <li>Developed and launched the backend for <strong>Housy's MVP</strong> using Node.js and Firebase</li>
-                                <li>Increased adoption by <strong>30%</strong> by implementing scalable infrastructure</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="work-item">
-                            <div class="work-header">
-                                <h3 class="work-company">Vorby</h3>
-                                <span class="work-location">Vellore, India</span>
-                            </div>
-                            <div class="work-title">Flutter App Development Intern</div>
-                            <div class="work-dates">May - Jun 2020</div>
-                            <ul class="work-description">
-                                <li>Developed mobile application using Flutter to connect mentors and students</li>
-                                <li>Implemented chat and video calling features with Firebase Firestore and Agora</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Projects Section -->
-            <section class="content-section" id="projects-section">
-                <div class="content-wrapper">
-                    <h2 class="section-heading">Projects</h2>
-                    <div class="projects-grid" id="projectsGrid">
-                        <div class="project-item">
-                            <h3 class="project-name">Numina</h3>
-                            <div class="project-role">Product Manager</div>
-                            <div class="project-dates">May 2025 - Present</div>
-                            <a href="https://strong-cactus-eb4d2d.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link">View Project →</a>
-                            <ul class="project-description">
-                                <li>Identified accounting workflow inefficiencies through interviews with CPAs and SMBs</li>
-                                <li>Improved general ledger accuracy by <strong>80%</strong> by automating reconciliation in <strong>QuickBooks</strong> using agentic AI</li>
-                                <li>Reduced anomalous ledger entries by <strong>20%</strong> using AI to convert CPA-defined rules into iterable checks</li>
-                                <li>Developing RAG use cases for enterprise knowledge retrieval via chat-based accounting regulatory assistance</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-item">
-                            <h3 class="project-name">Alarm.com BAS Assessment</h3>
-                            <div class="project-role">Technical and Product Consultant</div>
-                            <div class="project-dates">Sep 2025 - Nov 2025</div>
-                            <ul class="project-description">
-                                <li>Analyzed BAS protocols and deployment architectures to determine optimal technical approach</li>
-                                <li>Synthesized regulatory and modernization trends into prioritized opportunities and roadmap</li>
-                                <li>Defined milestones and partner integration phases for strategic implementation</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-item">
-                            <h3 class="project-name">Chidori</h3>
-                            <div class="project-role">Backend and Hardware Development</div>
-                            <div class="project-dates">Apr - May 2021</div>
-                            <a href="https://nimble-dieffenbachia-d945ce.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link">View Project →</a>
-                            <ul class="project-description">
-                                <li>Designed gesture-based wearable and Flutter app for seniors, delivering contextual medical alerts</li>
-                                <li>Increased usability by <strong>30%</strong> through customer-first design process</li>
-                                <li>Led to a patent submission</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-item">
-                            <h3 class="project-name">Driveguard</h3>
-                            <div class="project-role">Backend Development</div>
-                            <div class="project-dates">Dec 2020</div>
-                            <ul class="project-description">
-                                <li>Delivered accident alerting system for Elektrobit, improving emergency response time</li>
-                                <li>Reduced false positives by <strong>40%</strong> through user testing</li>
-                                <li>Integrated push/email notifications for real-time alerts</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <a href="#about" class="learn-more">
+                <span>Learn more</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="arrow-down">
+                    <path d="M6 9l6 6 6-6"></path>
+                </svg>
+            </a>
         </div>
-    </div>
+    </section>
+
+    <!-- About/Education Section -->
+    <section id="about" class="section section-white">
+        <div class="section-content">
+            <h2 class="section-title">Education</h2>
+            <div class="education-list">
+                <div class="education-card">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
+                        </div>
+                        <div class="education-info">
+                            <div class="education-title-row">
+                                <h3 class="education-title">Master of Engineering Management (MEM)</h3>
+                                <span class="education-period">Sep 2025 - Dec 2026</span>
+                            </div>
+                            <p class="education-location">Dartmouth College, Hanover, NH, USA</p>
+                            <p class="education-description">Coursework: Marketing, Technology Assessment, Statistics, Pricing Strategy, Optimisation Methods & Analytics, Operations Research</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
+                        </div>
+                        <div class="education-info">
+                            <div class="education-title-row">
+                                <h3 class="education-title">Bachelor of Technology in Electronics and Communication Engineering</h3>
+                                <span class="education-period">Jul 2019 - Apr 2023</span>
+                            </div>
+                            <p class="education-location">Vellore Institute of Technology, Vellore, India</p>
+                            <p class="education-gpa"><strong>GPA: 4.0</strong></p>
+                            <p class="education-description">Coursework: Artificial Intelligence, Data Structures and Algorithm, Consumer Behaviour, Cryptography, IOT System Design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section section-gray">
+        <div class="section-content">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-list">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="experience-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <div class="experience-info">
+                            <div class="experience-title-row">
+                                <h3 class="experience-title">Associate Software Developer</h3>
+                                <span class="experience-period">Aug 2023 - Sep 2025</span>
+                            </div>
+                            <p class="experience-company">Oracle | Bangalore, India</p>
+                            <ul class="experience-achievements">
+                                <li>Spearheaded CI/CD pipeline design on Oracle Cloud Infrastructure (OCI), accelerating release cycles by 3x and saving 200+ engineering hours by automating build and deployment workflows</li>
+                                <li>Led a cross-team effort to build third-party plugins from source on OCI, improving development and deployment efficiency while enforcing security and enabling seamless integration across teams</li>
+                                <li>Drove cross-cloud containerization strategy by identifying deployment inefficiencies and pitching a scalable solution to leadership, accelerating experimentation and aligning with long-term cloud-native goals through early-stage PoC delivery</li>
+                                <li>Reduced manual effort by 97% by automating BlackDuck and Fortify security scans, strengthening compliance workflows</li>
+                                <li>Supported the sales team in developing a tailored upsell proposition for a high-value client, leading to a successful conversion</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="experience-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <div class="experience-info">
+                            <div class="experience-title-row">
+                                <h3 class="experience-title">Software Development Intern</h3>
+                                <span class="experience-period">Jan - Jul 2023</span>
+                            </div>
+                            <p class="experience-company">Oracle | Bangalore, India</p>
+                            <ul class="experience-achievements">
+                                <li>Reduced Fortify vulnerabilities to 60% by implementing AES-256 encryption in runtime scripts to eliminate unencrypted passwords</li>
+                                <li>Developed the Diameter Security Application test suite to automate validation, reducing manual effort and ensuring timely releases</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="experience-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <div class="experience-info">
+                            <div class="experience-title-row">
+                                <h3 class="experience-title">Backend Development Intern</h3>
+                                <span class="experience-period">July - Sep 2021</span>
+                            </div>
+                            <p class="experience-company">Housy - Lank Hospitality Private Limited | Pune, India</p>
+                            <ul class="experience-achievements">
+                                <li>Developed and launched the backend for Housy's MVP using Node.js and Firebase, delivering real-time chat features and RESTful APIs that enabled a functional first version of the platform</li>
+                                <li>Increased adoption by 30% by implementing scalable infrastructure and integrating user analytics and push notifications</li>
+                                <li>Improved retention and usability by engaging early adopters, collecting feedback, and iterating on feature development</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="experience-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <div class="experience-info">
+                            <div class="experience-title-row">
+                                <h3 class="experience-title">Flutter App Development Intern</h3>
+                                <span class="experience-period">May - Jun 2020</span>
+                            </div>
+                            <p class="experience-company">Vorby | Vellore, India</p>
+                            <ul class="experience-achievements">
+                                <li>Developed the Vorby mobile application using Flutter to connect mentors and high school students, implementing chat and video calling features with Firebase Firestore and Agora and created the admin page for application management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-white">
+        <div class="section-content">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title-row">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="project-icon">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                            <h3 class="project-name">Numina</h3>
+                        </div>
+                        <a href="https://strong-cactus-eb4d2d.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="project-role">Product Manager</p>
+                    <p class="project-period">May 2025 - Present</p>
+                    <ul class="project-description">
+                        <li>Identified accounting workflow inefficiencies through interviews with CPAs and SMBs to define AI-driven product requirements</li>
+                        <li>Improved general ledger accuracy by 80% by automating reconciliation of multi-sourced transactions in QuickBooks using agentic AI</li>
+                        <li>Reduced anomalous ledger entries by 20% using AI to convert CPA-defined plaintext rules into iterable checks</li>
+                        <li>Developing RAG use cases for enterprise knowledge retrieval via chat-based accounting regulatory assistance</li>
+                    </ul>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title-row">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="project-icon">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                            <h3 class="project-name">Alarm.com BAS Assessment</h3>
+                        </div>
+                    </div>
+                    <p class="project-role">Technical and Product Consultant</p>
+                    <p class="project-period">Sep 2025 - Nov 2025</p>
+                    <ul class="project-description">
+                        <li>Analyzed BAS protocols and deployment architectures (edge, cloud, hybrid) to determine the optimal technical approach for Alarm.com's commercial expansion</li>
+                        <li>Synthesized regulatory, modernization, and energy-efficiency trends into prioritized opportunities and a structured roadmap defining milestones and partner integration phases</li>
+                    </ul>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title-row">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="project-icon">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                            <h3 class="project-name">Chidori</h3>
+                        </div>
+                        <a href="https://nimble-dieffenbachia-d945cc.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="project-role">Backend and Hardware Development</p>
+                    <p class="project-period">Apr - May 2021</p>
+                    <ul class="project-description">
+                        <li>Improved emergency response by designing a gesture-based wearable and Flutter app for seniors, delivering contextual medical alerts</li>
+                        <li>Increased usability by 30% through a customer-first design process and user feedback, leading to a patent submission</li>
+                    </ul>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title-row">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="project-icon">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                            <h3 class="project-name">Driveguard</h3>
+                        </div>
+                    </div>
+                    <p class="project-role">Backend Development</p>
+                    <p class="project-period">Dec 2020</p>
+                    <ul class="project-description">
+                        <li>Delivered an accident alerting system for Elektrobit, improving emergency response time leveraging accelerometer data and blood detection via computer vision</li>
+                        <li>Reduced false positives by 40% conducting user testing, leading to a more reliable alert system with integrated push/email notifications</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-gray">
+        <div class="section-content section-content-wide">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
+                                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                                <line x1="12" y1="19" x2="12" y2="23"></line>
+                                <line x1="8" y1="23" x2="16" y2="23"></line>
+                            </svg>
+                        </div>
+                        <h3 class="skill-title">AI</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">RAG pipelines</span>
+                        <span class="skill-tag">VectorDBs</span>
+                        <span class="skill-tag">Embedding models</span>
+                        <span class="skill-tag">Langchain</span>
+                        <span class="skill-tag">LLM orchestration</span>
+                        <span class="skill-tag">MCP</span>
+                        <span class="skill-tag">AWS Bedrock</span>
+                        <span class="skill-tag">Cursor</span>
+                        <span class="skill-tag">Bolt.new</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="skill-title">Software Engineering</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">DevOps</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Javascript</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Flutter</span>
+                        <span class="skill-tag">RESTful APIs</span>
+                        <span class="skill-tag">Sockets</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">R Programming</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </div>
+                        <h3 class="skill-title">Cloud & Orchestration</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">OCI</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">GCP</span>
+                        <span class="skill-tag">Openstack</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Gitlab</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">Terraform</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="2" x2="12" y2="6"></line>
+                                <line x1="12" y1="18" x2="12" y2="22"></line>
+                                <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line>
+                                <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line>
+                                <line x1="2" y1="12" x2="6" y2="12"></line>
+                                <line x1="18" y1="12" x2="22" y2="12"></line>
+                                <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line>
+                                <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line>
+                            </svg>
+                        </div>
+                        <h3 class="skill-title">Product Management</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Product discovery</span>
+                        <span class="skill-tag">Roadmap definition</span>
+                        <span class="skill-tag">User research</span>
+                        <span class="skill-tag">Metrics tracking</span>
+                        <span class="skill-tag">PRDs</span>
+                        <span class="skill-tag">Stakeholder alignment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-white">
+        <div class="section-content section-content-narrow">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-description">I'm always open to discussing product management, development work, or opportunities to collaborate.</p>
+            <div class="contact-buttons">
+                <a href="mailto:harshulc2001@gmail.com" class="contact-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span>harshulc2001@gmail.com</span>
+                </a>
+                <a href="tel:+16033221424" class="contact-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <span>+1 (603) 322-1424</span>
+                </a>
+            </div>
+            <a href="https://linkedin.com/in/Harshul-Chandrasekhar" target="_blank" rel="noopener noreferrer" class="linkedin-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                <span>Connect on LinkedIn</span>
+            </a>
+            <div class="footer">
+                <p class="footer-text">© 2025 Harshul Chandrashekhar. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
 
     <script src="app.js"></script>
 </body>
