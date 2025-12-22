@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshul Chandrashekhar - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="top-header">
+            <div class="header-left">
+                <img src="assets/IMG_8523.PNG" alt="Profile Picture" class="profile-picture" id="headerProfilePicture" />
+                <h1 class="header-title" id="headerTitle">Harshul</h1>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <div class="main-content" id="mainContent">
+            <!-- Welcome Screen (shown when chat is empty) -->
+            <div class="welcome-screen" id="welcomeScreen">
+                <div class="welcome-profile">
+                    <img src="assets/IMG_8523.PNG" alt="Harshul Chandrashekhar" class="welcome-profile-picture" id="welcomeProfilePicture" />
+                </div>
+                <h2 class="main-heading" id="welcomeHeading">Hi, I'm Harshul</h2>
+                <h3 class="sub-heading">Ask me anything.</h3>
+                <p class="description">Chat with me to learn about my experience, projects, and background.</p>
+            </div>
+
+            <!-- Chat Messages Container -->
+            <div class="chat-container" id="chatContainer">
+                <!-- Messages will be dynamically added here -->
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="chat-input-container">
+            <form class="chat-input-form" id="chatForm">
+                <input 
+                    type="text" 
+                    class="chat-input" 
+                    id="chatInput" 
+                    placeholder="Message Harshul..." 
+                    autocomplete="off"
+                    autofocus
+                />
+                <button type="submit" class="send-button" id="sendButton" aria-label="Send message">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 1L7 9M15 1L10 15L7 9M15 1L1 7L7 9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Send</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
