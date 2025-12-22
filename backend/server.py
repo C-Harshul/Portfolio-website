@@ -21,6 +21,11 @@ def index():
     """Serve the main HTML file."""
     return send_from_directory(frontend_dir, 'index.html')
 
+@app.route('/chat.html')
+def chat_page():
+    """Serve the chat page."""
+    return send_from_directory(frontend_dir, 'chat.html')
+
 @app.route('/<path:path>')
 def serve_static(path):
     """Serve static files (CSS, JS, etc.)."""

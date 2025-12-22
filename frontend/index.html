@@ -11,51 +11,154 @@
         <!-- Header -->
         <header class="top-header">
             <div class="header-left">
-                <img src="assets/IMG_8523.PNG" alt="Profile Picture" class="profile-picture" id="headerProfilePicture" />
-                <h1 class="header-title" id="headerTitle">Harshul</h1>
+                <h1 class="header-title">Harshul Chandrashekhar</h1>
+            </div>
+            <div class="header-right">
+                <nav class="tab-navigation">
+                    <button class="tab-button" data-section="about-section">About</button>
+                    <button class="tab-button" data-section="work-section">Work</button>
+                    <button class="tab-button" data-section="projects-section">Projects</button>
+                </nav>
+                <a href="/chat.html" class="chat-button" target="_blank">Chat with Me</a>
             </div>
         </header>
 
-        <!-- Main Content Area -->
-        <div class="main-content" id="mainContent">
-            <!-- Welcome Screen (shown when chat is empty) -->
-            <div class="welcome-screen" id="welcomeScreen">
-                <div class="welcome-profile">
-                    <img src="assets/IMG_8523.PNG" alt="Harshul Chandrashekhar" class="welcome-profile-picture" id="welcomeProfilePicture" />
+        <!-- Main Content Area - Single Scrollable Page -->
+        <div class="main-content single-page" id="mainContent">
+            <!-- About Section -->
+            <section class="content-section" id="about-section">
+                <div class="content-wrapper">
+                    <div class="about-section">
+                        <div class="about-profile">
+                            <img src="assets/IMG_8523.PNG" alt="Harshul Chandrashekhar" class="about-profile-picture" />
+                        </div>
+                        <h2 class="greeting">Hey I'm Harshul</h2>
+                        <div class="about-text">
+                            <p class="intro-text">I am a software engineer turned Product Manager with the drive to bring change with technology</p>
+                        </div>
+                    </div>
                 </div>
-                <h2 class="main-heading" id="welcomeHeading">Hi, I'm Harshul</h2>
-                <h3 class="sub-heading">Ask me anything.</h3>
-                <p class="description">Chat with me to learn about my experience, projects, and background.</p>
-            </div>
+            </section>
 
-            <!-- Chat Messages Container -->
-            <div class="chat-container" id="chatContainer">
-                <!-- Messages will be dynamically added here -->
-            </div>
-        </div>
+            <!-- Work Section -->
+            <section class="content-section" id="work-section">
+                <div class="content-wrapper">
+                    <h2 class="section-heading">Work & Experience</h2>
+                    <div class="work-list" id="workList">
+                        <div class="work-item">
+                            <div class="work-header">
+                                <h3 class="work-company">Oracle</h3>
+                                <span class="work-location">Bangalore, India</span>
+                            </div>
+                            <div class="work-title">Associate Software Developer</div>
+                            <div class="work-dates">Aug 2023 - Sep 2025</div>
+                            <ul class="work-description">
+                                <li>Spearheaded CI/CD pipeline design on Oracle Cloud Infrastructure (OCI), <strong>accelerating</strong> release cycles by <strong>3x</strong> and saving <strong>200+ engineering hours</strong></li>
+                                <li>Led cross-team effort to build <strong>third-party plugins</strong> from source on OCI, improving development efficiency while <strong>enforcing security</strong></li>
+                                <li>Drove cross-cloud containerization <strong>strategy</strong>, accelerating experimentation through early-stage <strong>PoC delivery</strong></li>
+                                <li>Reduced manual effort by <strong>77%</strong> by automating BlackDuck and Fortify security scans</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="work-item">
+                            <div class="work-header">
+                                <h3 class="work-company">Oracle</h3>
+                                <span class="work-location">Bangalore, India</span>
+                            </div>
+                            <div class="work-title">Software Development Intern</div>
+                            <div class="work-dates">Jan - Jul 2023</div>
+                            <ul class="work-description">
+                                <li>Reduced Fortify vulnerabilities by <strong>60%</strong> by implementing AES-256 encryption in runtime scripts</li>
+                                <li>Developed Diameter Security Application test suite to automate validation</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="work-item">
+                            <div class="work-header">
+                                <h3 class="work-company">Housy - Lank Hospitality Private Limited</h3>
+                                <span class="work-location">Pune, India</span>
+                            </div>
+                            <div class="work-title">Backend Development Intern</div>
+                            <div class="work-dates">July - Sep 2021</div>
+                            <ul class="work-description">
+                                <li>Developed and launched the backend for <strong>Housy's MVP</strong> using Node.js and Firebase</li>
+                                <li>Increased adoption by <strong>30%</strong> by implementing scalable infrastructure</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="work-item">
+                            <div class="work-header">
+                                <h3 class="work-company">Vorby</h3>
+                                <span class="work-location">Vellore, India</span>
+                            </div>
+                            <div class="work-title">Flutter App Development Intern</div>
+                            <div class="work-dates">May - Jun 2020</div>
+                            <ul class="work-description">
+                                <li>Developed mobile application using Flutter to connect mentors and students</li>
+                                <li>Implemented chat and video calling features with Firebase Firestore and Agora</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <!-- Input Area -->
-        <div class="chat-input-container">
-            <form class="chat-input-form" id="chatForm">
-                <input 
-                    type="text" 
-                    class="chat-input" 
-                    id="chatInput" 
-                    placeholder="Message Harshul..." 
-                    autocomplete="off"
-                    autofocus
-                />
-                <button type="submit" class="send-button" id="sendButton" aria-label="Send message">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 1L7 9M15 1L10 15L7 9M15 1L1 7L7 9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span>Send</span>
-                </button>
-            </form>
+            <!-- Projects Section -->
+            <section class="content-section" id="projects-section">
+                <div class="content-wrapper">
+                    <h2 class="section-heading">Projects</h2>
+                    <div class="projects-grid" id="projectsGrid">
+                        <div class="project-item">
+                            <h3 class="project-name">Numina</h3>
+                            <div class="project-role">Product Manager</div>
+                            <div class="project-dates">May 2025 - Present</div>
+                            <a href="https://strong-cactus-eb4d2d.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link">View Project →</a>
+                            <ul class="project-description">
+                                <li>Identified accounting workflow inefficiencies through interviews with CPAs and SMBs</li>
+                                <li>Improved general ledger accuracy by <strong>80%</strong> by automating reconciliation in <strong>QuickBooks</strong> using agentic AI</li>
+                                <li>Reduced anomalous ledger entries by <strong>20%</strong> using AI to convert CPA-defined rules into iterable checks</li>
+                                <li>Developing RAG use cases for enterprise knowledge retrieval via chat-based accounting regulatory assistance</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-item">
+                            <h3 class="project-name">Alarm.com BAS Assessment</h3>
+                            <div class="project-role">Technical and Product Consultant</div>
+                            <div class="project-dates">Sep 2025 - Nov 2025</div>
+                            <ul class="project-description">
+                                <li>Analyzed BAS protocols and deployment architectures to determine optimal technical approach</li>
+                                <li>Synthesized regulatory and modernization trends into prioritized opportunities and roadmap</li>
+                                <li>Defined milestones and partner integration phases for strategic implementation</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-item">
+                            <h3 class="project-name">Chidori</h3>
+                            <div class="project-role">Backend and Hardware Development</div>
+                            <div class="project-dates">Apr - May 2021</div>
+                            <a href="https://nimble-dieffenbachia-d945ce.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link">View Project →</a>
+                            <ul class="project-description">
+                                <li>Designed gesture-based wearable and Flutter app for seniors, delivering contextual medical alerts</li>
+                                <li>Increased usability by <strong>30%</strong> through customer-first design process</li>
+                                <li>Led to a patent submission</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-item">
+                            <h3 class="project-name">Driveguard</h3>
+                            <div class="project-role">Backend Development</div>
+                            <div class="project-dates">Dec 2020</div>
+                            <ul class="project-description">
+                                <li>Delivered accident alerting system for Elektrobit, improving emergency response time</li>
+                                <li>Reduced false positives by <strong>40%</strong> through user testing</li>
+                                <li>Integrated push/email notifications for real-time alerts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 
     <script src="app.js"></script>
 </body>
 </html>
-
