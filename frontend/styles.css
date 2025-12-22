@@ -38,6 +38,7 @@ body {
     flex-direction: column;
     padding: 0;
     position: relative;
+    justify-content: space-between;
 }
 
 .top-header {
@@ -89,6 +90,9 @@ body {
     padding: 2rem;
     overflow-y: auto;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .main-content {
@@ -97,6 +101,7 @@ body {
     display: flex;
     flex-direction: column;
     scroll-behavior: smooth;
+    justify-content: center;
 }
 
 /* Welcome Screen */
@@ -110,11 +115,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 400px;
+    flex: 1;
+    min-height: 0;
 }
 
 .welcome-profile {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .welcome-profile-picture {
@@ -131,7 +137,7 @@ body {
     font-size: 3.5rem;
     font-weight: 700;
     color: var(--slate-900);
-    margin: 0 0 1rem 0;
+    margin: 0 0 1.5rem 0;
     letter-spacing: -0.02em;
     line-height: 1.1;
 }
@@ -140,7 +146,7 @@ body {
     font-size: 2rem;
     font-weight: 400;
     color: var(--slate-600);
-    margin: 0 0 2rem 0;
+    margin: 0 0 1.5rem 0;
     letter-spacing: -0.01em;
     line-height: 1.2;
 }
@@ -148,7 +154,7 @@ body {
 .description {
     font-size: 1.125rem;
     color: var(--slate-900);
-    margin: 0 0 3rem 0;
+    margin: 0;
     line-height: 1.6;
     max-width: 600px;
     margin-left: auto;
@@ -314,7 +320,7 @@ body {
 
 /* Input Container */
 .chat-input-container {
-    padding: 1.5rem 2rem;
+    padding: 2rem;
     background: var(--white);
     flex-shrink: 0;
     display: none;
@@ -330,6 +336,7 @@ body {
     align-items: center;
     max-width: 800px;
     margin: 0 auto;
+    justify-content: center;
 }
 
 .chat-input {
