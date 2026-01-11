@@ -6,7 +6,7 @@ from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 
 # Get backend URL from environment or use default (gst-guru-chat backend)
-BACKEND_URL = os.environ.get('BACKEND_URL', 'http://98.85.81.4:8001')
+BACKEND_URL = os.environ.get('BACKEND_URL', 'http://localhost:8001')
 
 # Set static folder to frontend directory
 backend_dir = os.path.dirname(os.path.abspath(__file__))
@@ -31,6 +31,28 @@ def serve_static(path):
     """Serve static files (CSS, JS, etc.)."""
     return send_from_directory(frontend_dir, path)
 
+@app.route('/api/session', methods=['POST'])
+def session():
+    """Proxy session creation requests to backend session endpoint."""
+    try:
+        response = requests.post(
+            f'{BACKEND_URL}/session',
+            headers={'Content-Type': 'application/json'},
+            timeout=30
+        )
+        response.raise_for_status()
+        return jsonify(response.json()), response.status_code
+    except requests.exceptions.RequestException as e:
+        print(f"Error proxying session request: {str(e)}")
+        return jsonify({
+            'error': f'Error connecting to backend: {str(e)}'
+        }), 500
+    except Exception as e:
+        print(f"Error processing session request: {str(e)}")
+        return jsonify({
+            'error': f'Error creating session: {str(e)}'
+        }), 500
+
 @app.route('/api/chat', methods=['POST'])
 def chat():
     """Proxy chat API requests to backend query endpoint."""
@@ -41,6 +63,9 @@ def chat():
             'question': data.get('question') or data.get('message', ''),
             'force_refresh': data.get('force_refresh', False)
         }
+        # Include session_id if provided
+        if data.get('session_id'):
+            payload['session_id'] = data.get('session_id')
         response = requests.post(
             f'{BACKEND_URL}/query',
             json=payload,
@@ -93,6 +118,9 @@ def retrieve():
             'question': data.get('question') or data.get('message', ''),
             'force_refresh': data.get('force_refresh', False)
         }
+        # Include session_id if provided
+        if data.get('session_id'):
+            payload['session_id'] = data.get('session_id')
         response = requests.post(
             f'{BACKEND_URL}/query',
             json=payload,

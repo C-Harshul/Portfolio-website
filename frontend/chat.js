@@ -12,6 +12,9 @@ class ChatApp {
         this.isProcessing = false;
         this.hasAnimated = false;
         
+        // Session Management
+        this.sessionId = localStorage.getItem('session_id') || null;
+        
         // Use Flask proxy server to avoid CORS issues
         // The proxy server will forward requests to the actual backend
         this.backendUrl = window.BACKEND_URL || '';
@@ -25,6 +28,9 @@ class ChatApp {
             e.preventDefault();
             this.handleSubmit();
         });
+        
+        // Initialize session on page load
+        this.initializeSession();
         
         // Clear chat on every refresh
         this.clearMessages();
@@ -154,12 +160,39 @@ class ChatApp {
         }
     }
     
+    async initializeSession() {
+        if (!this.sessionId) {
+            try {
+                const apiUrl = this.backendUrl ? `${this.backendUrl}/session` : '/api/session';
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    this.sessionId = data.session_id;
+                    localStorage.setItem('session_id', this.sessionId);
+                    console.log('Session initialized:', this.sessionId);
+                }
+            } catch (error) {
+                console.error('Failed to initialize session:', error);
+            }
+        }
+    }
+    
     async sendMessage(message) {
         this.isProcessing = true;
         this.sendButton.disabled = true;
         this.sendButton.classList.add('loading');
         
         try {
+            // Ensure session is initialized
+            if (!this.sessionId) {
+                await this.initializeSession();
+            }
+            
             // Create AbortController for timeout
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 120000); // 2 minute timeout
@@ -173,6 +206,7 @@ class ChatApp {
                 },
                 body: JSON.stringify({
                     question: message,
+                    session_id: this.sessionId,
                     force_refresh: false
                 }),
                 signal: controller.signal
@@ -199,6 +233,12 @@ class ChatApp {
             
             const data = await response.json();
             const assistantMessage = data.response || data.message || data.answer || data.result || 'Sorry, I could not process your request.';
+            
+            // Update session_id if it changed
+            if (data.session_id && data.session_id !== this.sessionId) {
+                this.sessionId = data.session_id;
+                localStorage.setItem('session_id', this.sessionId);
+            }
             
             this.removeTypingIndicator();
             this.addMessage('assistant', assistantMessage);
